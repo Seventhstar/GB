@@ -5,6 +5,7 @@ public class Main {
         // Урок 2.
         int[] numbers = {1, 1, 1, 0, 0, 1, 0, 0, 1, 0};
 
+
         System.out.print("Задача 1: ");
 
         for (int i = 0; i < numbers.length; i++) {
