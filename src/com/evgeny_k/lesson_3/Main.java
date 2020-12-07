@@ -13,7 +13,7 @@ public class Main {
             boolean win = false;
             int number = new Random().nextInt(10);
             System.out.println("Я загадал число от 0 до 9. Попробуйте угадать!");
-            System.out.println(number);
+            //System.out.println(number);
             for (int i = 0; i < TRY_COUNT; i++) {
                 System.out.println("Попытка №" + (i + 1));
                 int userNumber = scanner.nextInt();
