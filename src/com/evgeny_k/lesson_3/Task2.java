@@ -1,4 +1,5 @@
 package com.evgeny_k.lesson_3;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -11,7 +12,7 @@ public class Task2 {
                 "nut", "olive", "pea", "peanut", "pear", "pepper", "pineapple", "pumpkin", "potato"};
 
         System.out.println("Я загадал слово. Попробуйте угадать!");
-        String word = words[new Random().nextInt(15)];
+        String word = words[new Random().nextInt(words.length)];
 
         char[] showChars = new char[SHOW_CHARS];
         for (int i = 0; i < SHOW_CHARS; i++) {
