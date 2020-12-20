@@ -1,9 +1,9 @@
 package com.evgeny_k.lesson_6;
 
 public class Animal {
-    int maxRunDistance;
-    int maxSwimDistance;
-    double maxJumpHeight;
+    protected int maxRunDistance;
+    protected int maxSwimDistance;
+    protected double maxJumpHeight;
 
     void run(int distance) {
         System.out.println("run: " + (distance > 0 && distance <= maxRunDistance));
