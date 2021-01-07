@@ -4,7 +4,7 @@ public class Robot implements SportActivable {
     private String name;
 
     @Override
-    public String GetName() {
+    public String getName() {
         return this.name;
     }
 

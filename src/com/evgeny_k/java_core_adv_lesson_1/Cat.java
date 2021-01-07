@@ -8,7 +8,7 @@ public class Cat implements SportActivable{
     }
 
     @Override
-    public String GetName() {
+    public String getName() {
         return this.name;
     }
 }
