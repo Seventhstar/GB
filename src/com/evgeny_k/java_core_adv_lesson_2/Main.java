@@ -47,18 +47,14 @@ public class Main {
     }
 
     private static int arrayAmount(String[][] array) throws MySizeArrayException, MyArrayDataException {
-        boolean badSize = false;
         int amount = 0;
 
-        if (array.length != GOOD_SIZE) badSize = true;
+        if (array.length != GOOD_SIZE) throw new MySizeArrayException();
         for (String[] row : array) {
             if (row.length != GOOD_SIZE) {
-                badSize = true;
-                break;
+                throw new MySizeArrayException();
             }
         }
-
-        if (badSize) throw new MySizeArrayException();
 
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
@@ -71,19 +67,5 @@ public class Main {
         }
 
         return amount;
-    }
-
-
-    public static class MySizeArrayException extends Exception {
-
-        public MySizeArrayException() {
-            super("Illegal size in array");
-        }
-    }
-
-    private static class MyArrayDataException extends Throwable {
-        public MyArrayDataException(int i, int j) {
-            super("Bad data in [" + i + "],[" + j + "]");
-        }
     }
 }
