@@ -23,5 +23,9 @@ public class Main {
 
         System.out.println("Al Pachino phones: " + phoneBook.get("Al Pachino"));
         System.out.println("Jason Statham phones: " + phoneBook.get("Jason Statham"));
+
+        phoneBook.add("Jason Statham", "+79811234167");
+
+        System.out.println("Jason Statham phones: " + phoneBook.get("Jason Statham"));
     }
 }
