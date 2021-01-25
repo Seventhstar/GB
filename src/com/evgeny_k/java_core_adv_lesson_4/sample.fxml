@@ -1,0 +1,27 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.TextArea?>
+<GridPane fx:controller="com.evgeny_k.java_core_adv_lesson_4.Controller" fx:id="pane"
+          xmlns:fx="http://javafx.com/fxml" alignment="TOP_LEFT">
+
+    <VBox fx:id="allPanels" spacing="8" fillWidth="true">
+        <HBox styleClass="chatPanel" VBox.vgrow="ALWAYS">
+            <TextArea styleClass="textArea" fx:id="allMessages" editable="false" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS"
+                      promptText="Send the first message"/>
+        </HBox>
+        <HBox fx:id="bottomPanel" spacing="4">
+            <TextField fx:id="newMessage" onAction="#sendMessage" promptText="Введите текст" HBox.hgrow="ALWAYS">
+                <HBox.margin>
+                    <Insets right="5.0"/>
+                </HBox.margin>
+            </TextField>
+            <Button fx:id="btnSend" onAction="#sendMessage" text="Отправить"/>
+        </HBox>
+    </VBox>
+
+</GridPane>
